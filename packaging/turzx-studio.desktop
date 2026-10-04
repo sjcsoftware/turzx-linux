@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=TURZX Studio
+GenericName=Smart screen editor
+Comment=Design what your TURZX / Turing USB smart screen shows
+Exec=turzx gui
+Icon=turzx-studio
+Terminal=false
+Categories=Utility;System;Monitor;
+Keywords=turing;turzx;smart screen;usb display;system monitor;
+StartupWMClass=turzx-studio

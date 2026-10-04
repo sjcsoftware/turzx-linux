@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "name": "Photo Clock",
+  "description": "A big clock and a glass stats panel over a gradient. Set your own photo as the background.",
+  "author": "turzx",
+  "canvas": [
+    1920,
+    462
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {
+    "text": "#ffffff",
+    "dim": "#ffffffaa"
+  },
+  "background": {
+    "color": "#3b1d6e",
+    "color2": "#0e3a5f",
+    "vertical": false,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.25
+  },
+  "widgets": [
+    {
+      "id": "clock-0",
+      "type": "clock",
+      "name": "Time",
+      "x": 70,
+      "y": 40,
+      "w": 900,
+      "h": 260,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "size": 250,
+        "align": "left",
+        "valign": "top"
+      }
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "name": "Date",
+      "x": 80,
+      "y": 300,
+      "w": 900,
+      "h": 50,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{time:%A, %d %B %Y}",
+        "weight": "medium",
+        "size": 40,
+        "color": "#ffffffcc",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "shape-2",
+      "type": "shape",
+      "name": "Glass panel",
+      "x": 1330,
+      "y": 60,
+      "w": 530,
+      "h": 342,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "fill": "#ffffff1f",
+        "radius": 28,
+        "border_color": "#ffffff33"
+      }
+    },
+    {
+      "id": "stat-3",
+      "type": "stat",
+      "name": "CPU",
+      "x": 1370,
+      "y": 96,
+      "w": 220,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "CPU",
+        "value": "{cpu.util:.0f}%",
+        "metric": "cpu.util",
+        "label_color": "#ffffffaa",
+        "value_size": 46,
+        "warn_at": 75,
+        "hot_at": 90
+      }
+    },
+    {
+      "id": "stat-4",
+      "type": "stat",
+      "name": "GPU",
+      "x": 1620,
+      "y": 96,
+      "w": 220,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "GPU",
+        "value": "{gpu.util:.0f}%",
+        "metric": "gpu.util",
+        "label_color": "#ffffffaa",
+        "value_size": 46,
+        "warn_at": 75,
+        "hot_at": 90
+      }
+    },
+    {
+      "id": "stat-5",
+      "type": "stat",
+      "name": "CPU temp",
+      "x": 1370,
+      "y": 214,
+      "w": 220,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "CPU TEMP",
+        "metric": "cpu.temp",
+        "label_color": "#ffffffaa",
+        "value_size": 46,
+        "warn_at": 75,
+        "hot_at": 88
+      }
+    },
+    {
+      "id": "stat-6",
+      "type": "stat",
+      "name": "RAM",
+      "x": 1620,
+      "y": 214,
+      "w": 220,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "MEMORY",
+        "value": "{mem.percent:.0f}%",
+        "label_color": "#ffffffaa",
+        "value_size": 46
+      }
+    },
+    {
+      "id": "text-7",
+      "type": "text",
+      "name": "Now playing label",
+      "x": 1370,
+      "y": 326,
+      "w": 470,
+      "h": 22,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{media.status|upper}",
+        "weight": "semibold",
+        "size": 15,
+        "color": "#ffffffaa",
+        "valign": "top",
+        "fit": false,
+        "hide_missing": true
+      }
+    },
+    {
+      "id": "text-8",
+      "type": "text",
+      "name": "Now playing",
+      "x": 1370,
+      "y": 348,
+      "w": 470,
+      "h": 34,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{media.title} · {media.artist}",
+        "weight": "semibold",
+        "size": 22,
+        "color": "#ffffff",
+        "valign": "top",
+        "hide_missing": true
+      }
+    }
+  ],
+  "order": 5
+}

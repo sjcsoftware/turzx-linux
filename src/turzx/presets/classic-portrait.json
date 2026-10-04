@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "name": "Classic Cards (portrait)",
+  "description": "The classic cards stacked for a screen standing upright.",
+  "author": "turzx",
+  "canvas": [
+    462,
+    1920
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {},
+  "background": {
+    "color": "@background",
+    "color2": "",
+    "vertical": true,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.0
+  },
+  "widgets": [
+    {
+      "id": "card-0",
+      "type": "card",
+      "name": "CPU",
+      "x": 14,
+      "y": 14,
+      "w": 434,
+      "h": 406,
+      "visible": true,
+      "locked": false,
+      "props": {}
+    },
+    {
+      "id": "card-1",
+      "type": "card",
+      "name": "GPU",
+      "x": 14,
+      "y": 434,
+      "w": 434,
+      "h": 406,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "gpu"
+      }
+    },
+    {
+      "id": "card-2",
+      "type": "card",
+      "name": "MEMORY",
+      "x": 14,
+      "y": 854,
+      "w": 434,
+      "h": 292,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "memory"
+      }
+    },
+    {
+      "id": "card-3",
+      "type": "card",
+      "name": "IO",
+      "x": 14,
+      "y": 1161,
+      "w": 434,
+      "h": 406,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "io"
+      }
+    },
+    {
+      "id": "card-4",
+      "type": "card",
+      "name": "CLOCK",
+      "x": 14,
+      "y": 1581,
+      "w": 434,
+      "h": 325,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "clock"
+      }
+    }
+  ],
+  "order": 7
+}

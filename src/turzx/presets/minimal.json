@@ -1,0 +1,294 @@
+{
+  "format": 1,
+  "name": "Minimal",
+  "description": "Big light numerals on pure black, thin accent bars.",
+  "author": "turzx",
+  "canvas": [
+    1920,
+    462
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {
+    "background": "#000000",
+    "dim": "#6b7280",
+    "text": "#f5f5f5"
+  },
+  "background": {
+    "color": "@background",
+    "color2": "",
+    "vertical": true,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.0
+  },
+  "widgets": [
+    {
+      "id": "text-0",
+      "type": "text",
+      "name": "CPU label",
+      "x": 70,
+      "y": 70,
+      "w": 340,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "CPU",
+        "weight": "semibold",
+        "size": 22,
+        "color": "@dim",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "name": "CPU value",
+      "x": 70,
+      "y": 110,
+      "w": 340,
+      "h": 180,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{cpu.util:.0f}%",
+        "weight": "light",
+        "size": 190,
+        "valign": "top"
+      }
+    },
+    {
+      "id": "bar-2",
+      "type": "bar",
+      "name": "CPU bar",
+      "x": 70,
+      "y": 320,
+      "w": 320,
+      "h": 4,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "cpu.util",
+        "color": "@cpu",
+        "radius": 2
+      }
+    },
+    {
+      "id": "text-3",
+      "type": "text",
+      "name": "CPU detail",
+      "x": 70,
+      "y": 346,
+      "w": 340,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{cpu.temp:.0f}°C  ·  {cpu.freq:.1f} GHz",
+        "weight": "medium",
+        "size": 20,
+        "color": "@dim",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-4",
+      "type": "text",
+      "name": "GPU label",
+      "x": 470,
+      "y": 70,
+      "w": 340,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "GPU",
+        "weight": "semibold",
+        "size": 22,
+        "color": "@dim",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-5",
+      "type": "text",
+      "name": "GPU value",
+      "x": 470,
+      "y": 110,
+      "w": 340,
+      "h": 180,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.util:.0f}%",
+        "weight": "light",
+        "size": 190,
+        "valign": "top"
+      }
+    },
+    {
+      "id": "bar-6",
+      "type": "bar",
+      "name": "GPU bar",
+      "x": 470,
+      "y": 320,
+      "w": 320,
+      "h": 4,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.util",
+        "color": "@gpu",
+        "radius": 2
+      }
+    },
+    {
+      "id": "text-7",
+      "type": "text",
+      "name": "GPU detail",
+      "x": 470,
+      "y": 346,
+      "w": 340,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.temp:.0f}°C  ·  {gpu.power:.0f} W",
+        "weight": "medium",
+        "size": 20,
+        "color": "@dim",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-8",
+      "type": "text",
+      "name": "MEMORY label",
+      "x": 870,
+      "y": 70,
+      "w": 340,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "MEMORY",
+        "weight": "semibold",
+        "size": 22,
+        "color": "@dim",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-9",
+      "type": "text",
+      "name": "MEMORY value",
+      "x": 870,
+      "y": 110,
+      "w": 340,
+      "h": 180,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{mem.percent:.0f}%",
+        "weight": "light",
+        "size": 190,
+        "valign": "top"
+      }
+    },
+    {
+      "id": "bar-10",
+      "type": "bar",
+      "name": "MEMORY bar",
+      "x": 870,
+      "y": 320,
+      "w": 320,
+      "h": 4,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "color": "@mem",
+        "radius": 2
+      }
+    },
+    {
+      "id": "text-11",
+      "type": "text",
+      "name": "MEMORY detail",
+      "x": 870,
+      "y": 346,
+      "w": 340,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{mem.used|gib:.1f} of {mem.total|gib:.0f} GB",
+        "weight": "medium",
+        "size": 20,
+        "color": "@dim",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "clock-12",
+      "type": "clock",
+      "name": "Time",
+      "x": 1330,
+      "y": 70,
+      "w": 520,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "weight": "light",
+        "size": 200,
+        "align": "right",
+        "valign": "top"
+      }
+    },
+    {
+      "id": "text-13",
+      "type": "text",
+      "name": "Date",
+      "x": 1330,
+      "y": 320,
+      "w": 520,
+      "h": 34,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{time:%A, %d %B}",
+        "weight": "regular",
+        "size": 26,
+        "color": "@dim",
+        "align": "right",
+        "valign": "top"
+      }
+    },
+    {
+      "id": "text-14",
+      "type": "text",
+      "name": "Net",
+      "x": 1330,
+      "y": 360,
+      "w": 520,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "↓ {net.down|rate}   ↑ {net.up|rate}",
+        "weight": "medium",
+        "size": 20,
+        "color": "@dim",
+        "align": "right",
+        "valign": "top"
+      }
+    }
+  ],
+  "order": 2
+}

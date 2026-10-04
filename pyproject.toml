@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "turzx"
+dynamic = ["version"]
+description = "Linux driver, background service and layout editor for TURZX / Turing Smart Screen USB displays"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.10"
+keywords = ["turzx", "turing smart screen", "usb display", "system monitor", "linux"]
+classifiers = [
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "pyusb>=1.2",
+    "pycryptodome>=3.15",
+    "pillow>=10.1",
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+gui = ["PySide6-Essentials>=6.5"]
+nvidia = ["nvidia-ml-py>=12"]
+mirror = ["mss>=9"]
+all = ["PySide6-Essentials>=6.5", "nvidia-ml-py>=12", "mss>=9"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+turzx = "turzx.cli:main"
+
+[tool.hatch.version]
+path = "src/turzx/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/turzx"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "tools", "packaging", "scripts", "docs", "README.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B008"]

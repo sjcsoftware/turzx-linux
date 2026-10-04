@@ -1,0 +1,487 @@
+{
+  "format": 1,
+  "name": "Gauges",
+  "description": "Six ring gauges with history sparklines and a clock.",
+  "author": "turzx",
+  "canvas": [
+    1920,
+    462
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {},
+  "background": {
+    "color": "@background",
+    "color2": "",
+    "vertical": true,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.0
+  },
+  "widgets": [
+    {
+      "id": "shape-0",
+      "type": "shape",
+      "name": "Backdrop",
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 462,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "fill": "#0a0d14",
+        "fill2": "#05070a",
+        "radius": 0,
+        "border_width": 0
+      }
+    },
+    {
+      "id": "ring-1",
+      "type": "ring",
+      "name": "CPU",
+      "x": 40,
+      "y": 64,
+      "w": 220,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "thickness": 18,
+        "color": "@cpu",
+        "value": "{value:.0f}%",
+        "value_size": 56
+      }
+    },
+    {
+      "id": "text-2",
+      "type": "text",
+      "name": "CPU detail",
+      "x": 30,
+      "y": 306,
+      "w": 240,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{cpu.freq:.1f} GHz",
+        "weight": "semibold",
+        "size": 19,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "graph-3",
+      "type": "graph",
+      "name": "CPU history",
+      "x": 50,
+      "y": 354,
+      "w": 200,
+      "h": 60,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "samples": 90,
+        "color": "@cpu",
+        "fill_opacity": 0.18
+      }
+    },
+    {
+      "id": "ring-4",
+      "type": "ring",
+      "name": "CPU °C",
+      "x": 292,
+      "y": 64,
+      "w": 220,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "cpu.temp",
+        "thickness": 18,
+        "color": "@cpu",
+        "value": "{value:.0f}°",
+        "label": "CPU °C",
+        "value_size": 56,
+        "warn_at": 70,
+        "hot_at": 85
+      }
+    },
+    {
+      "id": "text-5",
+      "type": "text",
+      "name": "CPU °C detail",
+      "x": 282,
+      "y": 306,
+      "w": 240,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{cpu.name}",
+        "weight": "semibold",
+        "size": 19,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "graph-6",
+      "type": "graph",
+      "name": "CPU °C history",
+      "x": 302,
+      "y": 354,
+      "w": 200,
+      "h": 60,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "cpu.temp",
+        "samples": 90,
+        "color": "@cpu",
+        "fill_opacity": 0.18
+      }
+    },
+    {
+      "id": "ring-7",
+      "type": "ring",
+      "name": "GPU",
+      "x": 544,
+      "y": 64,
+      "w": 220,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.util",
+        "thickness": 18,
+        "color": "@gpu",
+        "value": "{value:.0f}%",
+        "label": "GPU",
+        "value_size": 56
+      }
+    },
+    {
+      "id": "text-8",
+      "type": "text",
+      "name": "GPU detail",
+      "x": 534,
+      "y": 306,
+      "w": 240,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.power:.0f} W",
+        "weight": "semibold",
+        "size": 19,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "graph-9",
+      "type": "graph",
+      "name": "GPU history",
+      "x": 554,
+      "y": 354,
+      "w": 200,
+      "h": 60,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.util",
+        "samples": 90,
+        "color": "@gpu",
+        "fill_opacity": 0.18
+      }
+    },
+    {
+      "id": "ring-10",
+      "type": "ring",
+      "name": "GPU °C",
+      "x": 796,
+      "y": 64,
+      "w": 220,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.temp",
+        "thickness": 18,
+        "color": "@gpu",
+        "value": "{value:.0f}°",
+        "label": "GPU °C",
+        "value_size": 56,
+        "warn_at": 70,
+        "hot_at": 83
+      }
+    },
+    {
+      "id": "text-11",
+      "type": "text",
+      "name": "GPU °C detail",
+      "x": 786,
+      "y": 306,
+      "w": 240,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.clock:.2f} GHz",
+        "weight": "semibold",
+        "size": 19,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "graph-12",
+      "type": "graph",
+      "name": "GPU °C history",
+      "x": 806,
+      "y": 354,
+      "w": 200,
+      "h": 60,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.temp",
+        "samples": 90,
+        "color": "@gpu",
+        "fill_opacity": 0.18
+      }
+    },
+    {
+      "id": "ring-13",
+      "type": "ring",
+      "name": "RAM",
+      "x": 1048,
+      "y": 64,
+      "w": 220,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "mem.percent",
+        "thickness": 18,
+        "color": "@mem",
+        "value": "{value:.0f}%",
+        "label": "RAM",
+        "value_size": 56,
+        "warn_at": 85,
+        "hot_at": 95
+      }
+    },
+    {
+      "id": "text-14",
+      "type": "text",
+      "name": "RAM detail",
+      "x": 1038,
+      "y": 306,
+      "w": 240,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{mem.used|gib:.1f} / {mem.total|gib:.0f} GB",
+        "weight": "semibold",
+        "size": 19,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "graph-15",
+      "type": "graph",
+      "name": "RAM history",
+      "x": 1058,
+      "y": 354,
+      "w": 200,
+      "h": 60,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "mem.percent",
+        "samples": 90,
+        "color": "@mem",
+        "fill_opacity": 0.18
+      }
+    },
+    {
+      "id": "ring-16",
+      "type": "ring",
+      "name": "VRAM",
+      "x": 1300,
+      "y": 64,
+      "w": 220,
+      "h": 220,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.vram_percent",
+        "thickness": 18,
+        "color": "@mem",
+        "value": "{value:.0f}%",
+        "label": "VRAM",
+        "value_size": 56,
+        "warn_at": 85,
+        "hot_at": 95
+      }
+    },
+    {
+      "id": "text-17",
+      "type": "text",
+      "name": "VRAM detail",
+      "x": 1290,
+      "y": 306,
+      "w": 240,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.vram_used|gib:.1f} / {gpu.vram_total|gib:.0f} GB",
+        "weight": "semibold",
+        "size": 19,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "graph-18",
+      "type": "graph",
+      "name": "VRAM history",
+      "x": 1310,
+      "y": 354,
+      "w": 200,
+      "h": 60,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.vram_percent",
+        "samples": 90,
+        "color": "@mem",
+        "fill_opacity": 0.18
+      }
+    },
+    {
+      "id": "shape-19",
+      "type": "shape",
+      "name": "Divider",
+      "x": 1560,
+      "y": 40,
+      "w": 2,
+      "h": 382,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "fill": "@card_border",
+        "radius": 0,
+        "border_width": 0
+      }
+    },
+    {
+      "id": "clock-20",
+      "type": "clock",
+      "name": "Time",
+      "x": 1590,
+      "y": 70,
+      "w": 300,
+      "h": 130,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "size": 104
+      }
+    },
+    {
+      "id": "clock-21",
+      "type": "clock",
+      "name": "Seconds",
+      "x": 1590,
+      "y": 196,
+      "w": 300,
+      "h": 36,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{time:%S}",
+        "weight": "semibold",
+        "size": 26,
+        "color": "@dim"
+      }
+    },
+    {
+      "id": "text-22",
+      "type": "text",
+      "name": "Day",
+      "x": 1590,
+      "y": 250,
+      "w": 300,
+      "h": 34,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{time:%A}",
+        "weight": "semibold",
+        "size": 26,
+        "align": "center"
+      }
+    },
+    {
+      "id": "text-23",
+      "type": "text",
+      "name": "Date",
+      "x": 1590,
+      "y": 286,
+      "w": 300,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{time:%d %B %Y}",
+        "weight": "medium",
+        "size": 20,
+        "color": "@dim",
+        "align": "center"
+      }
+    },
+    {
+      "id": "text-24",
+      "type": "text",
+      "name": "Net down",
+      "x": 1590,
+      "y": 352,
+      "w": 300,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "↓ {net.down|rate}",
+        "weight": "semibold",
+        "size": 20,
+        "color": "@net",
+        "align": "center"
+      }
+    },
+    {
+      "id": "text-25",
+      "type": "text",
+      "name": "Net up",
+      "x": 1590,
+      "y": 384,
+      "w": 300,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "↑ {net.up|rate}",
+        "weight": "semibold",
+        "size": 20,
+        "color": "@net_up",
+        "align": "center"
+      }
+    }
+  ],
+  "order": 1
+}

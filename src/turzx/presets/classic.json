@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "name": "Classic Cards",
+  "description": "Five system cards: CPU, GPU, memory, network + disk and a clock. The default.",
+  "author": "turzx",
+  "canvas": [
+    1920,
+    462
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {},
+  "background": {
+    "color": "@background",
+    "color2": "",
+    "vertical": true,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.0
+  },
+  "widgets": [
+    {
+      "id": "card-0",
+      "type": "card",
+      "name": "CPU",
+      "x": 14,
+      "y": 14,
+      "w": 488,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {}
+    },
+    {
+      "id": "card-1",
+      "type": "card",
+      "name": "GPU",
+      "x": 516,
+      "y": 14,
+      "w": 488,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "gpu"
+      }
+    },
+    {
+      "id": "card-2",
+      "type": "card",
+      "name": "MEMORY",
+      "x": 1019,
+      "y": 14,
+      "w": 303,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "memory"
+      }
+    },
+    {
+      "id": "card-3",
+      "type": "card",
+      "name": "NETWORK",
+      "x": 1335,
+      "y": 14,
+      "w": 303,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "io"
+      }
+    },
+    {
+      "id": "card-4",
+      "type": "card",
+      "name": "CLOCK",
+      "x": 1652,
+      "y": 14,
+      "w": 254,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "kind": "clock"
+      }
+    }
+  ],
+  "order": 0
+}

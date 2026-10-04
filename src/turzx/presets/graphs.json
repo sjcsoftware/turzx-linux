@@ -1,0 +1,281 @@
+{
+  "format": 1,
+  "name": "Graphs",
+  "description": "Three large live charts: CPU, GPU and network throughput.",
+  "author": "turzx",
+  "canvas": [
+    1920,
+    462
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {},
+  "background": {
+    "color": "@background",
+    "color2": "",
+    "vertical": true,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.0
+  },
+  "widgets": [
+    {
+      "id": "shape-0",
+      "type": "shape",
+      "name": "CPU panel",
+      "x": 14,
+      "y": 14,
+      "w": 621,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {}
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "name": "CPU title",
+      "x": 40,
+      "y": 36,
+      "w": 300,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "CPU",
+        "size": 22,
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-2",
+      "type": "text",
+      "name": "CPU value",
+      "x": 229,
+      "y": 28,
+      "w": 380,
+      "h": 66,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{cpu.util:.0f}%",
+        "size": 52,
+        "align": "right",
+        "valign": "top"
+      }
+    },
+    {
+      "id": "text-3",
+      "type": "text",
+      "name": "CPU detail",
+      "x": 229,
+      "y": 94,
+      "w": 380,
+      "h": 28,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{cpu.temp:.0f}°C · {cpu.freq:.1f} GHz",
+        "weight": "medium",
+        "size": 19,
+        "color": "@dim",
+        "align": "right",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "graph-4",
+      "type": "graph",
+      "name": "CPU graph",
+      "x": 16,
+      "y": 144,
+      "w": 617,
+      "h": 302,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "max": 100,
+        "samples": 240,
+        "color": "@cpu",
+        "fill_opacity": 0.22,
+        "line_width": 2.5,
+        "grid": 3
+      }
+    },
+    {
+      "id": "shape-5",
+      "type": "shape",
+      "name": "GPU panel",
+      "x": 649,
+      "y": 14,
+      "w": 621,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {}
+    },
+    {
+      "id": "text-6",
+      "type": "text",
+      "name": "GPU title",
+      "x": 675,
+      "y": 36,
+      "w": 300,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "GPU",
+        "size": 22,
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-7",
+      "type": "text",
+      "name": "GPU value",
+      "x": 864,
+      "y": 28,
+      "w": 380,
+      "h": 66,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.util:.0f}%",
+        "size": 52,
+        "align": "right",
+        "valign": "top"
+      }
+    },
+    {
+      "id": "text-8",
+      "type": "text",
+      "name": "GPU detail",
+      "x": 864,
+      "y": 94,
+      "w": 380,
+      "h": 28,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{gpu.temp:.0f}°C · {gpu.power:.0f} W",
+        "weight": "medium",
+        "size": 19,
+        "color": "@dim",
+        "align": "right",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "graph-9",
+      "type": "graph",
+      "name": "GPU graph",
+      "x": 651,
+      "y": 144,
+      "w": 617,
+      "h": 302,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.util",
+        "max": 100,
+        "samples": 240,
+        "color": "@gpu",
+        "fill_opacity": 0.22,
+        "line_width": 2.5,
+        "grid": 3
+      }
+    },
+    {
+      "id": "shape-10",
+      "type": "shape",
+      "name": "NETWORK panel",
+      "x": 1285,
+      "y": 14,
+      "w": 621,
+      "h": 434,
+      "visible": true,
+      "locked": false,
+      "props": {}
+    },
+    {
+      "id": "text-11",
+      "type": "text",
+      "name": "NETWORK title",
+      "x": 1311,
+      "y": 36,
+      "w": 300,
+      "h": 30,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "NETWORK",
+        "size": 22,
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "text-12",
+      "type": "text",
+      "name": "NETWORK value",
+      "x": 1500,
+      "y": 28,
+      "w": 380,
+      "h": 66,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "↓ {net.down|rate}",
+        "size": 52,
+        "align": "right",
+        "valign": "top"
+      }
+    },
+    {
+      "id": "text-13",
+      "type": "text",
+      "name": "NETWORK detail",
+      "x": 1500,
+      "y": 94,
+      "w": 380,
+      "h": 28,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "↑ {net.up|rate}",
+        "weight": "medium",
+        "size": 19,
+        "color": "@dim",
+        "align": "right",
+        "valign": "top",
+        "fit": false
+      }
+    },
+    {
+      "id": "graph-14",
+      "type": "graph",
+      "name": "NETWORK graph",
+      "x": 1287,
+      "y": 144,
+      "w": 617,
+      "h": 302,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "net.down",
+        "metric2": "net.up",
+        "floor": 125000,
+        "samples": 240,
+        "color": "@net",
+        "fill_opacity": 0.22,
+        "line_width": 2.5,
+        "grid": 3
+      }
+    }
+  ],
+  "order": 4
+}

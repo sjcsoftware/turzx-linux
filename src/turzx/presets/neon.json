@@ -1,0 +1,207 @@
+{
+  "format": 1,
+  "name": "Neon",
+  "description": "Glowing synthwave gauges and chart on deep indigo.",
+  "author": "turzx",
+  "canvas": [
+    1920,
+    462
+  ],
+  "font": "Inter, Ubuntu Sans, Noto Sans, DejaVu Sans",
+  "palette": {
+    "background": "#0b0618",
+    "text": "#ffffff",
+    "dim": "#9b8cff",
+    "accent": "#ff3df2"
+  },
+  "background": {
+    "color": "#120a2a",
+    "color2": "#05030d",
+    "vertical": true,
+    "image": "",
+    "fit": "cover",
+    "dim": 0.0
+  },
+  "widgets": [
+    {
+      "id": "ring-0",
+      "type": "ring",
+      "name": "CPU ring",
+      "x": 40,
+      "y": 41,
+      "w": 380,
+      "h": 380,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "thickness": 26,
+        "color": "#ff3df2",
+        "track": "#2a1238",
+        "value": "{value:.0f}%",
+        "value_size": 96,
+        "label_size": 22,
+        "glow": 10,
+        "glow_color": "#ff3df2aa"
+      }
+    },
+    {
+      "id": "ring-1",
+      "type": "ring",
+      "name": "GPU ring",
+      "x": 440,
+      "y": 41,
+      "w": 380,
+      "h": 380,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric": "gpu.util",
+        "thickness": 26,
+        "color": "#22e4ff",
+        "track": "#0e2a38",
+        "value": "{value:.0f}%",
+        "label": "GPU",
+        "value_size": 96,
+        "label_size": 22,
+        "glow": 10,
+        "glow_color": "#22e4ffaa"
+      }
+    },
+    {
+      "id": "clock-2",
+      "type": "clock",
+      "name": "Time",
+      "x": 860,
+      "y": 40,
+      "w": 620,
+      "h": 200,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "size": 190,
+        "color": "#ffffff",
+        "glow": 14,
+        "glow_color": "#ff3df2cc"
+      }
+    },
+    {
+      "id": "text-3",
+      "type": "text",
+      "name": "Date",
+      "x": 860,
+      "y": 236,
+      "w": 620,
+      "h": 40,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "{time:%A  %d.%m.%Y}",
+        "weight": "semibold",
+        "size": 30,
+        "color": "#22e4ff",
+        "align": "center",
+        "glow": 6,
+        "glow_color": "#22e4ff99"
+      }
+    },
+    {
+      "id": "graph-4",
+      "type": "graph",
+      "name": "CPU+GPU graph",
+      "x": 880,
+      "y": 300,
+      "w": 580,
+      "h": 120,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "metric2": "gpu.util",
+        "max": 100,
+        "style": "line",
+        "color": "#ff3df2",
+        "color2": "#22e4ff",
+        "line_width": 3,
+        "glow": 6,
+        "glow_color": "#ffffff55"
+      }
+    },
+    {
+      "id": "stat-5",
+      "type": "stat",
+      "name": "CPU temp",
+      "x": 1520,
+      "y": 50,
+      "w": 360,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "CPU TEMP",
+        "label_color": "#9b8cff",
+        "value_size": 48,
+        "color": "#ff3df2",
+        "glow": 6,
+        "glow_color": "#ff3df288"
+      }
+    },
+    {
+      "id": "stat-6",
+      "type": "stat",
+      "name": "GPU temp",
+      "x": 1520,
+      "y": 150,
+      "w": 360,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "GPU TEMP",
+        "value": "{gpu.temp:.0f}°C",
+        "label_color": "#9b8cff",
+        "value_size": 48,
+        "color": "#22e4ff",
+        "glow": 6,
+        "glow_color": "#22e4ff88"
+      }
+    },
+    {
+      "id": "stat-7",
+      "type": "stat",
+      "name": "RAM",
+      "x": 1520,
+      "y": 250,
+      "w": 360,
+      "h": 90,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "label": "MEMORY",
+        "value": "{mem.used|gib:.1f} GB",
+        "label_color": "#9b8cff",
+        "value_size": 48,
+        "color": "#fff35c",
+        "glow": 6,
+        "glow_color": "#fff35c88"
+      }
+    },
+    {
+      "id": "text-8",
+      "type": "text",
+      "name": "Net",
+      "x": 1520,
+      "y": 360,
+      "w": 360,
+      "h": 40,
+      "visible": true,
+      "locked": false,
+      "props": {
+        "text": "↓ {net.down|rate}  ↑ {net.up|rate}",
+        "weight": "semibold",
+        "size": 22,
+        "color": "#9b8cff",
+        "valign": "top"
+      }
+    }
+  ],
+  "order": 6
+}
