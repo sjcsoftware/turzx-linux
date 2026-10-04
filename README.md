@@ -13,8 +13,7 @@
 ---
 
 Linux driver, background service and drag-and-drop editor<br>
-for **TURZX / Turing smart screens**. The vendor only supports Windows.
-
+for **TURZX / Turing smart screens**. 
 Built on the protocol work of [turing-smart-screen-python](https://github.com/mathoudebine/turing-smart-screen-python) by [@mathoudebine](https://github.com/mathoudebine).
 
 </div>
